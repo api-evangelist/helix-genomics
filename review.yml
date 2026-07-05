@@ -1,0 +1,81 @@
+aid: helix-genomics
+name: Helix
+review:
+  question: Does Helix expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Helix's developer surface (the DNA Product
+    Studio Genomics, Ancestry, and Insight APIs) is a partner-gated, request/response
+    surface documented only at a high level on Helix's public marketing and product
+    pages. No WebSocket, SSE, or other server-push transport is documented on any
+    Helix API, and there is no openly published API specification or base URL to
+    model as AsyncAPI.
+findings:
+  summary: |
+    Helix does not publish a documented public WebSocket API. Helix is a population
+    genomics company built around a proprietary Exome+ next-generation sequencing
+    assay, a CLIA/CAP-certified clinical lab (CLIA #05D2117342, CAP #9382893), and
+    bioinformatics tooling. Its developer surface is the DNA Product Studio, which
+    exposes three named APIs - a Genomics API (SNPs, indels, copy number variants
+    across 100M+ base pairs), an Ancestry API (continental and regional ancestry),
+    and an Insight API (traits and polygenic risk scores) - plus Embedded Apps and
+    an App Acceleration Framework for white-label DNA products. These are described
+    only on Helix's public marketing/product pages; access is enterprise/partner-gated
+    and provisioned through Helix partnerships. There is no public self-serve
+    developer portal, no openly published base URL, and no OpenAPI specification.
+    No realtime, bidirectional, or streaming WebSocket (ws:// or wss://) endpoint is
+    documented anywhere on Helix's platform.
+  accessModel: |
+    Enterprise/partner-gated. The Genomics, Ancestry, and Insight APIs are made
+    available to health systems, life sciences companies, and payers through the DNA
+    Product Studio under a partnership arrangement. Products are commonly delivered
+    as Embedded Apps on the Helix platform (no coding or hosting) or via the App
+    Acceleration Framework for standalone web/mobile DNA apps. Underlying genomic data
+    originates from Helix's own CLIA/CAP lab ("Sequence Once, Query Often"), so API
+    access presupposes a sequencing relationship with Helix rather than open sign-up.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    Helix publishes no open API reference, base URL, or machine-readable spec. The
+    three APIs listed in apis.yml (Genomics, Ancestry, Insight) are documented by
+    name and capability on Helix product pages but their concrete endpoint paths,
+    base URLs, and authentication schemes are only visible to provisioned partners.
+    No individual endpoints were fabricated in this entry.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: partial
+      note: DNA Product Studio APIs (Genomics, Ancestry, Insight) are described as
+        programmatic APIs but no public base URL or reference is published; partner-gated.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Helix's platform as of the review date.
+sources:
+  - url: https://www.helix.com/
+    type: Website
+    note: Company overview - population genomics platform, Exome+, precision health.
+  - url: https://genomics.helix.com/
+    type: Documentation
+    note: Helix Genomics API landing page; partner-gated, no public spec exposed.
+  - url: https://www.helix.com/health-systems
+    type: Website
+    note: Health-systems platform (Research Network, Genomic Advantage, Precision Pathway);
+      enterprise/partner engagement, no public API.
+  - url: https://www.helix.com/research
+    type: Website
+    note: Exome+ assay, CLIA/CAP lab, bioinformatics; no public programmatic data access described.
+  - url: https://www.prnewswire.com/news-releases/helix-announces-dna-product-studio-to-power-rapid-development-of-new-genomics-apps-and-tests-300733874.html
+    type: PressRelease
+    note: DNA Product Studio launch - names the Genomics, Ancestry, and Insight APIs,
+      Embedded Apps, and App Acceleration Framework.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Helix's developer APIs are partner-gated
+    with no openly published specification or base URL. No AsyncAPI document was created
+    because there is no documented server-push transport to model, and no endpoints were
+    fabricated - the API entries are modeled from public product documentation only.
