@@ -1,0 +1,27 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.helix.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Mar 13 23:59:59 2027 GMT
+  hsts: false
+- host: genomics.helix.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Dec  9 23:59:59 2026 GMT
+  hsts: false
+domains:
+- domain: helix.com
+  dnssec: false
+  caa:
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog"
+  - 0 issue "amazon.com"
+  - 0 issue "amazonaws.com"
+  - 0 issue "amazontrust.com"
+  - 0 issue "awstrust.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

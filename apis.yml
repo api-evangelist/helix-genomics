@@ -91,6 +91,8 @@ apis:
     the DNA Product Studio to partner-built consumer and clinical experiences;
     endpoints are modeled from Helix product documentation.
 common:
+- type: DomainSecurity
+  url: security/helix-genomics-domain-security.yml
 - type: Website
   url: https://www.helix.com
 - type: LinkedIn
