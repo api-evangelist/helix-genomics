@@ -17,7 +17,18 @@ description: Helix is a population genomics company operating an end-to-end prec
   enterprise/partner-gated and provisioned through Helix partnerships; there is no
   public self-serve developer portal or openly published API specification, so the
   API surface below is modeled from Helix's public product documentation.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/helix-genomics.png
 tags:
 - Genomics
 - Population Genomics
