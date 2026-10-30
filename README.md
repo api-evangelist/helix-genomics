@@ -1,4 +1,4 @@
-# Helix (helix-genomics)
+# Helix
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,74 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Helix is a population genomics company operating an end-to-end precision health platform: a proprietary **Exome+** next-generation sequencing assay, a CLIA/CAP-certified clinical lab (CLIA #05D2117342, CAP #9382893), and bioinformatics tooling. The platform enables health systems, life sciences companies, and payers to integrate genomic data into clinical care and research at population scale, on a "Sequence Once, Query Often" model.
+Helix is a population genomics company operating an end-to-end precision health platform - a proprietary Exome+ next-generation sequencing assay, a CLIA/CAP-certified clinical lab, and bioinformatics tooling - that enables health systems, life sciences companies, and payers to integrate genomic data into clinical care and research at population scale. Through its DNA Product Studio, Helix exposes a partner-gated developer surface - a Genomics API (direct programmatic access to 100M+ base pairs including SNPs, indels, and copy number variants with panel-grade coverage of actionable genes), an Ancestry API (continental ancestry for 6 global populations or regional ancestry for 26+ populations), and an Insight API (user-specific results for hundreds of traits and conditions, from single-marker traits to machine-learning polygenic risk scores) - alongside Embedded Apps and an App Acceleration Framework for building white-label DNA products. API access is enterprise/partner-gated and provisioned through Helix partnerships; there is no public self-serve developer portal or openly published API specification, so the API surface below is modeled from Helix's public product documentation.
 
-Through its **DNA Product Studio**, Helix exposes a partner-gated developer surface for building DNA-powered products:
+**Areas:** Genomics · Population Genomics · Sequencing · Exome · Precision Health · Bioinformatics · Healthcare · DNA · Partner API
 
-- **Genomics API** — direct programmatic access to more than 100 million base pairs, including SNPs, indels, and copy number variants, with panel-grade coverage of clinically important regions (ACMG actionable genes, carrier screening, hereditary cancer, hereditary cardiovascular disease).
-- **Ancestry API** — continental ancestry across 6 global populations or regional ancestry across 26+ populations.
-- **Insight API** — user-specific results for hundreds of genetic traits and conditions, from single-marker traits to machine-learning polygenic risk scores.
+## Helix on APIs.io
 
-Partners build on top of these APIs via **Embedded Apps** (launched on the Helix platform with no coding or hosting) or the **App Acceleration Framework** (white-label standalone web and mobile DNA apps).
+Everything profiled for Helix is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/helix-genomics/](https://apis.io/providers/helix-genomics/)** — or go straight to one of the APIs or properties below.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/helix-genomics/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/helix-genomics/refs/heads/main/apis.yml)
+### APIs (3)
 
-## Access Model
+- [Helix Genomics API](https://apis.io/apis/helix-genomics/helix-genomics-api/) — Partner-gated programmatic access to Helix Exome+ sequencing data - more than 100 million base pairs including SNPs, indels, and copy number variants, with…
+- [Helix Ancestry API](https://apis.io/apis/helix-genomics/helix-ancestry-api/) — Partner-gated ancestry results derived from a participant's Exome+ sequence - continental ancestry across 6 global populations or regional ancestry across…
+- [Helix Insight API](https://apis.io/apis/helix-genomics/helix-insight-api/) — Partner-gated user-specific results for hundreds of genetic traits and conditions, ranging from single-marker traits to complex polygenic risk scores…
 
-**Enterprise / partner-gated — not public self-serve.** Helix does not publish an open developer portal, a public API base URL, or a machine-readable API specification (OpenAPI/AsyncAPI). The Genomics, Ancestry, and Insight APIs are provisioned through Helix partnerships, and API access presupposes a sequencing relationship with Helix's own CLIA/CAP lab. Because no open reference exists, the API entries in `apis.yml` are **modeled** from Helix's public product documentation — no endpoint paths, base URLs, or auth schemes were fabricated.
+### Published properties
 
-## Pricing
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-B2B / contact-sales. Helix does not publish self-serve API pricing. Platform commercials are structured around offerings such as **Helix Genomic Advantage™** (subscription-based pricing for health systems), the **Helix Research Network®**, and **Helix Precision Pathway™**, all engaged directly through Helix's partnerships team. No public plans, rate-limit, or FinOps documents were created because no sourced pricing details are published.
+#### Security (1)
 
-## WebSocket / Realtime
+Authentication, trust centre, and vulnerability disclosure.
 
-No documented public WebSocket API. No realtime, bidirectional, or streaming (ws:// or wss://) endpoint is documented anywhere on Helix's platform. See `review.yml`.
+- [Helix Genomics Domain Security](https://apis.io/security/helix-genomics/helix-genomics-domain-security/)
 
-## Tags
+## Where to find this API
 
-- Genomics
-- Population Genomics
-- Sequencing
-- Exome
-- Precision Health
-- Bioinformatics
-- Healthcare
-- DNA
-- Partner API
-
-## Timestamps
-
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
-
-## APIs
-
-### Helix Genomics API
-
-Partner-gated programmatic access to Helix Exome+ sequencing data — 100M+ base pairs including SNPs, indels, and copy number variants, with panel-grade coverage of ACMG actionable genes, carrier screening, hereditary cancer, and hereditary cardiovascular disease.
-
-- **Human URL:** [https://genomics.helix.com/](https://genomics.helix.com/)
-
-### Helix Ancestry API
-
-Partner-gated ancestry results derived from a participant's Exome+ sequence — continental ancestry across 6 global populations or regional ancestry across 26+ populations.
-
-- **Human URL:** [https://genomics.helix.com/](https://genomics.helix.com/)
-
-### Helix Insight API
-
-Partner-gated user-specific results for hundreds of genetic traits and conditions, from single-marker traits to machine-learning polygenic risk scores computed over Helix Exome+ data.
-
-- **Human URL:** [https://genomics.helix.com/](https://genomics.helix.com/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.helix.com)
-- [LinkedIn](https://www.linkedin.com/company/my-helix)
 - [Documentation](https://genomics.helix.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/helix-genomics/](https://apis.io/providers/helix-genomics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Helix: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/helix-genomics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
